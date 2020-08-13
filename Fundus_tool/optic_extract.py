@@ -66,13 +66,14 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
     blue, green, red = cv2.split(rgb_img)
     img_name = img_path.split('/')[-1]
     cv2.circle(rgb_img, (center_x,center_y), r, (0,0,0), 2)
+
+    cv2.imwrite('../../small/3.jpg',rgb_img)
     mask = np.zeros((rgb_img.shape[0], rgb_img.shape[1]), dtype=np.uint8)
     cv2.circle(mask, (center_x,center_y), r, (1,1,1), -1, 8, 0)
     cropped = red*mask
     cond=np.where(cropped>0)
     dif = np.max(cropped[cond])-np.min(cropped[cond])
     cropped_normal = (red-np.min(cropped[cond]))*(255/dif)*mask
-    cv2.imwrite('../../small/3.jpg',cropped_normal)
     threshold = 140
     while True:
         if threshold > 255:
@@ -127,7 +128,7 @@ def extract_od(img_path, out_path):
 
 def main():
     #Input Image Path example
-    file = '../../small/vk092422.jpg'
+    file = '../../small/vk034394.jpg'
     #Output Image Path example
     output_path = "../../small/"
     extract_od(file,output_path)
