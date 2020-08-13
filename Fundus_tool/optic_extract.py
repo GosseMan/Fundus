@@ -19,6 +19,7 @@ def kaiser_filtering(k_filter, green_im):
 def center_detection(img_path):
     img_name = img_path.split('/')[-1]
     rgb_img = cv2.imread(img_path)
+    cv2.imwrite('../../small/1.jpg',rgb_img)
     ser = img_name.split('.')[0]
     od_box = int(rgb_img.shape[1]/20)
     blue, green, red = cv2.split(rgb_img)
@@ -56,6 +57,7 @@ def center_detection(img_path):
     center_x = int(x_index+od_box/2)
     center_y = int(y_index+od_box/2)
     center = cv2.line(rgb_img, (center_x,center_y),(center_x,center_y), (255,0,0), 5)
+    cv2.imwrite('../../small/2.jpg',center)
     return center_x, center_y
 
 def od_cropping(img_path, out_path, center_x, center_y, r):
@@ -70,13 +72,14 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
     cond=np.where(cropped>0)
     dif = np.max(cropped[cond])-np.min(cropped[cond])
     cropped_normal = (red-np.min(cropped[cond]))*(255/dif)*mask
+    cv2.imwrite('../../small/3.jpg',cropped_normal)
     threshold = 140
     while True:
         if threshold > 255:
             print('Cannot find OD :', img_path)
             return (0,0)
         binary_img = (cropped_normal>=threshold).astype('uint8')*255
-        images, contours, hierachy = cv2.findContours(binary_img, cv2.RETR_TREE,cv2.CHAIN_APPROX_TC89_KCOS)
+        contours, hierachy = cv2.findContours(binary_img, cv2.RETR_TREE,cv2.CHAIN_APPROX_TC89_KCOS)
         if len(contours) == 0:
             threshold = threshold+10
             continue
@@ -94,6 +97,7 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
         fit_ellipse_area = math.pi * MA * ma/4
         circularity = best_area/fit_ellipse_area
         cv2.drawContours(rgb_img, [best_cnt], 0, (0, 255, 0), 1)
+        cv2.imwrite('../../small/4.jpg',rgb_img)
         if best_area > mask.sum()/4 or ma/MA>1.5:
             threshold = threshold+10
             continue
@@ -104,6 +108,7 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
             break
         threshold = threshold+10
     el_img =  cv2.ellipse(rgb_img, ((x,y), (MA, ma), angle), (255, 255, 255), -1) #red
+    cv2.imwrite('../../small/5.jpg',el_img)
     od_mask = (el_img==255)
     od_mask = od_mask.astype(np.uint8)
     od = od_mask[:,:,0] * gray_img
@@ -121,11 +126,10 @@ def extract_od(img_path, out_path):
     od_cropping(img_path, out_path, center_x, center_y, r)
 
 def main():
-
     #Input Image Path example
-    file = './data/image.jpg'
+    file = '../../small/vk092422.jpg'
     #Output Image Path example
-    output_path = "./out/"
+    output_path = "../../small/"
     extract_od(file,output_path)
     return
 
