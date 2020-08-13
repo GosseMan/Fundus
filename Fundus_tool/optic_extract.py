@@ -56,7 +56,7 @@ def center_detection(img_path):
 
     center_x = int(x_index+od_box/2)
     center_y = int(y_index+od_box/2)
-    center = cv2.line(rgb_img, (center_x,center_y),(center_x,center_y), (255,0,0), 5)
+    center = cv2.line(rgb_img, (center_x,center_y),(center_x,center_y), (255,0,0), 20)
     cv2.imwrite('../../small/2.jpg',center)
     return center_x, center_y
 
@@ -69,7 +69,7 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
 
     cv2.imwrite('../../small/3.jpg',rgb_img)
     mask = np.zeros((rgb_img.shape[0], rgb_img.shape[1]), dtype=np.uint8)
-    cv2.circle(mask, (center_x,center_y), r, (1,1,1), -1, 8, 0)
+    cv2.circle(mask, (center_x,center_y), r, (1,1,1), -1, 15, 0)
     cropped = red*mask
     cond=np.where(cropped>0)
     dif = np.max(cropped[cond])-np.min(cropped[cond])
