@@ -19,7 +19,6 @@ def kaiser_filtering(k_filter, green_im):
 def center_detection(img_path):
     img_name = img_path.split('/')[-1]
     rgb_img = cv2.imread(img_path)
-    cv2.imwrite('../../small/1.jpg',rgb_img)
     ser = img_name.split('.')[0]
     od_box = int(rgb_img.shape[1]/20)
     blue, green, red = cv2.split(rgb_img)
@@ -57,7 +56,6 @@ def center_detection(img_path):
     center_x = int(x_index+od_box/2)
     center_y = int(y_index+od_box/2)
     center = cv2.line(rgb_img, (center_x,center_y),(center_x,center_y), (255,0,0), 20)
-    cv2.imwrite('../../small/2.jpg',center)
     return center_x, center_y
 
 def od_cropping(img_path, out_path, center_x, center_y, r):
@@ -66,8 +64,6 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
     blue, green, red = cv2.split(rgb_img)
     img_name = img_path.split('/')[-1]
     cv2.circle(rgb_img, (center_x,center_y), r, (0,0,0), 2)
-
-    cv2.imwrite('../../small/3.jpg',rgb_img)
     mask = np.zeros((rgb_img.shape[0], rgb_img.shape[1]), dtype=np.uint8)
     cv2.circle(mask, (center_x,center_y), r, (1,1,1), -1, 15, 0)
     cropped = red*mask
@@ -98,7 +94,6 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
         fit_ellipse_area = math.pi * MA * ma/4
         circularity = best_area/fit_ellipse_area
         cv2.drawContours(rgb_img, [best_cnt], 0, (0, 255, 0), 1)
-        cv2.imwrite('../../small/4.jpg',rgb_img)
         if best_area > mask.sum()/4 or ma/MA>1.5:
             threshold = threshold+10
             continue
@@ -109,7 +104,6 @@ def od_cropping(img_path, out_path, center_x, center_y, r):
             break
         threshold = threshold+10
     el_img =  cv2.ellipse(rgb_img, ((x,y), (MA, ma), angle), (255, 255, 255), -1) #red
-    cv2.imwrite('../../small/5.jpg',el_img)
     od_mask = (el_img==255)
     od_mask = od_mask.astype(np.uint8)
     od = od_mask[:,:,0] * gray_img
@@ -128,9 +122,9 @@ def extract_od(img_path, out_path):
 
 def main():
     #Input Image Path example
-    file = '../../small/vk034394.jpg'
+    file = './img.jpg'
     #Output Image Path example
-    output_path = "../../small/"
+    output_path = "./out/"
     extract_od(file,output_path)
     return
 
