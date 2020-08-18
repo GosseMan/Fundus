@@ -11,6 +11,7 @@ train / validation split
     resize_dir(in_path, out_path)
 </code>
 </pre>
+
 2. Train Validation Split
 <pre>
 <code>
@@ -24,6 +25,7 @@ train / validation split
 </pre>
 trainval_split : 이미지 수 가준 split
 groupsplit : 환자 수 기준 split
+
 3. Undersampling
 <pre>
 <code>
@@ -38,6 +40,7 @@ groupsplit : 환자 수 기준 split
 under_class_list : undersample할 class명
 num_sample_list : undersample 개수
 -> 위의 경우 '0ZERO' class 100개, '1ONE' class 50개로 undersample
+
 4. Zoom
 <pre>
 <code>
@@ -57,6 +60,7 @@ num_sample_list : undersample 개수
 class_list_zoom : zoom할 class명
 zoom_list : zoom 비율
 -> 위의 경우 '1ONE' class, '2TWO' class 모두 1.1, 1.2배 zoom
+
 5. Augmentation
 <pre>
 <code>
@@ -73,6 +77,7 @@ zoom_list : zoom 비율
 </pre>
 class_list : augmentation할 class명
 aug.py에서 지정한 augmentation 수행(현재 vertical flip)
+
 6. CLAHE
 <pre>
 <code>
