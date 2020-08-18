@@ -17,4 +17,16 @@ contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비�
 
 edge_block.py
 =============
-path에 있는 image를 읽고 edge block순으로 sort_path에 오름차순 정렬.
+1. Read green image
+2. Canny edge detect
+3. Count edge block num
+
+디렉토리의 이미지를 읽고 edge block기준 오름차순 정렬하여 sort_path에 저장
+
+makefilter.py
+=============
+<img src="./filter_example/average.jpg" width="30%" height="10%"> <img src="./OD_example/2.jpg" width="30%" height="10%"> <img src="./OD_example/3.jpg" width="30%" height="10%">
+<img src="./filter_example/filter.jpg" width="30%" height="10%"> <img src="./OD_example/5.jpg" width="30%" height="10%"> <img src="./OD_example/6.jpg" width="30%" height="10%">
+filter_dir : 디렉토리 내 모든 이미지의 필터생성
+filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평균한 필터생성
+filter_average_binary : 디렉토리 내 모든 이미지의 평균값을 binarization하여 필터생성 (threshold 40->100 반복)
