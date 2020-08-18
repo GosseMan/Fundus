@@ -43,8 +43,8 @@ def is_edge_block(block, threshold):
 
 
 if __name__ == '__main__':
-        path ='/home/psj/Desktop/small'
-        sort_path='/home/psj/Desktop/small_edgeblock'
+        path ='image_dir'
+        sort_path='output_dir'
         file_list = os.listdir(path)
         edge_list = []
         if not os.path.isdir(sort_path):
