@@ -10,42 +10,30 @@ import clahe
 import os
 
 if __name__ == "__main__":
-    data_path = '/home/psj/Desktop/3ycut15_data_fazekas/0v1v23bal/'
-    folder_name = '0v1v23bal'
-    in_path = data_path+folder_name+'origin'
-    out_path = data_path+'trainvaltest'
-    '''
-    #resize_allfiles(in_path, out_path)
-    #resize
-    #resize_dir(in_path, out_path)
-
-    #train_validation_split
-    in_path = out_path
-    out_path = out_path + '_split'
-
-    '''
-
+    in_path = '/home/psj/Desktop/dd'
+    out_path = '/home/psj/Desktop/trainval_test'
+    testset_path = '/home/psj/Desktop/testset'
+    trainval_dir = '/home/psj/Desktop'
     rand_seed = 8
-
     #trainval_split(in_path, out_path, rand_seed)
     groupsplit(in_path, out_path, rand_seed, 0.9)
-
-    in_path = data_path+'trainvaltest/val'
-    out_path = data_path+'testset_clahe'
+    in_path = out_path + '/val'
+    testset_path = '/home/psj/Desktop/testset'
     dir_list = os.listdir(in_path)
     for dir in dir_list:
-         clahe.clahe_allfiles_dir(in_path+'/'+dir, out_path+'/'+dir, 8)
-    seed_list = [8, 88, 888]
+         clahe.clahe_allfiles_dir(in_path+'/'+dir, testset_path+'/'+dir, 8)
 
+    seed_list = [8, 88, 888]
     for seed in seed_list:
-        in_path = data_path+'trainvaltest/train'
-        out_path = data_path+folder_name+'_seed'+str(seed)
+        in_path = out_path+'/train'
+        out_path = trainval_dir + '/' + 'seed' + str(seed)
+        #trainval_split(in_path, out_path, rand_seed)
+        #groupsplit(in_path, out_path, rand_seed, 0.9)
         groupsplit_samenum(in_path, out_path, seed, 8/9)
-    #undersampling
+        #undersampling
 
         in_path = out_path
         out_path = out_path + '_under'
-
         under_class_list = ['0ZERO']
         #num_sample_list = [300]
         num_sample_list = [int(len(os.listdir(in_path+'/train/0ZERO'))/2)]
@@ -65,14 +53,6 @@ if __name__ == "__main__":
             for cls in class_list_zoom:
                 zoom_use_filter(in_path+'/train/'+cls,out_path+'/train/'+cls, zoom, filter)
 
-        '''
-        class_list_zoom = ['2TWO']
-        zoom_list = [1.03, 1.06, 1.09, 1.12, 1.15, 1.18]
-        for zoom in zoom_list:
-            for cls in class_list_zoom:
-                zoom_use_filter(in_path+'/train/'+cls,out_path+'/train/'+cls, zoom, filter)
-        '''
-
 
         #augmentation
         in_path = out_path
@@ -88,7 +68,7 @@ if __name__ == "__main__":
 
         #CLAHE
         in_path = out_path
-        out_path = data_path+'seed'+str(seed)+'_trainset'
+        out_path = out_path+'_clahe'
 
         #clahe.clahe_allfiles_dir(in_path,out_path,8)
         clahe.clahe_dir(in_path,out_path,8)

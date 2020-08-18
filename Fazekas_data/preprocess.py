@@ -20,23 +20,21 @@ if __name__ == "__main__":
     #train_validation_split
     in_path = out_path
     out_path = out_path + '_split'
-    rand_seed = 888
+    rand_seed = 8
     #trainval_split(in_path, out_path, rand_seed)
-    groupsplit(in_path, out_path, rand_seed, 8/9)
+    groupsplit(in_path, out_path, rand_seed, 0.9)
 
     #undersampling
     in_path = out_path
     out_path = out_path + '_under'
-
-    under_class_list = ['0ZERO']
-    num_sample_list = [int(0.5*len(os.listdir(in_path+'/train/0ZERO')))]
+    under_class_list = ['0ZERO', '1ONE']
+    num_sample_list = [100, 50]
     undersampling(in_path,out_path,under_class_list,num_sample_list,rand_seed)
 
 
     #zoom
     in_path = out_path
     out_path = out_path +'_zoom'
-
     shutil.copytree(in_path, out_path)
     class_list_zoom = ['2TWO']
     zoom_list = [1.1, 1.2]
@@ -50,7 +48,6 @@ if __name__ == "__main__":
     #augmentation
     in_path = out_path
     out_path = out_path + '_aug'
-
     class_list = ['0ZERO', '1ONE', '2TWO']
     shutil.copytree(in_path, out_path)
     aug = ApplyAug()
@@ -62,7 +59,6 @@ if __name__ == "__main__":
     #CLAHE
     in_path = out_path
     out_path = out_path+'_clahe'
-
     clahe.clahe_dir(in_path,out_path,8)
     #clahe.clahe_green_dir(in_path, out_path, 8)
     #clahe.clahe_red_dir(in_path, out_path, 8)
