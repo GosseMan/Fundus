@@ -10,10 +10,10 @@ import clahe
 import os
 
 if __name__ == "__main__":
-    in_path = '/home/psj/Desktop/dd'
-    out_path = '/home/psj/Desktop/trainval_test'
-    testset_path = '/home/psj/Desktop/testset'
-    trainval_dir = '/home/psj/Desktop'
+    in_path = 'input image path'
+    out_path = 'trainval / test split path'
+    testset_path = 'testset path'
+    trainval_dir = 'trainval path'
     rand_seed = 8
     #trainval_split(in_path, out_path, rand_seed)
     groupsplit(in_path, out_path, rand_seed, 0.9)
