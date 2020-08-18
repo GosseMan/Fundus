@@ -2,7 +2,7 @@
 ***
 ## train / validation split
 ***
-다음 중 필요한 부분을 선택하여 사용 (
+다음 중 필요한 부분을 선택하여 사용 (각 단계별로 out_path에 결과물 저장)
 ### 1. Resize
 <pre>
 <code>
