@@ -1,5 +1,5 @@
 # optic_extract.py
-***
+
 참고 : <https://doi.org/10.1016/j.cmpb.2015.10.010>
 
 <img src="./OD_example/1.jpg" width="30%" height="10%"> <img src="./OD_example/2.jpg" width="30%" height="10%"> <img src="./OD_example/3.jpg" width="30%" height="10%">
@@ -17,7 +17,7 @@ contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비�
 
 ***
 # edge_block.py
-***
+
 1. Read green image
 2. Canny edge detect
 3. Count edge block num
@@ -26,7 +26,7 @@ contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비�
 
 ***
 # makefilter.py
-***
+
 <img src="./filter_example/average.jpg" width="30%" height="10%"> <img src="./filter_example/filter.jpg" width="30%" height="10%">
 
 filter_dir : 디렉토리 내 모든 이미지의 필터생성
@@ -37,7 +37,7 @@ filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평�
 
 ***
 # zoomin.py
-***
+
 <img src="./zoom_example/origin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin_filter.jpg" width="30%" height="10%">
 
 zoomin / zoomin_dir : 이미지 zoom-in
