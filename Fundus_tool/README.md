@@ -41,4 +41,4 @@ zoomin / zoomin_dir : 이미지 zoom-in
 
 zoomin_cut / zoomin_cut_dir : 이미지 zoom-in 후 자신을 binarization한 filter 적용
 
-**zoom_use_filter: 디렉토리 내 모든 이미지를 zoom-in 후 사전에 만들어진 filter를 이용하여 crop**
+**zoom_use_filter: 디렉토리 내 모든 이미지를 zoom-in 후 사전에 만들어진 filter를 이용하여 crop (makefilter.py에서 만들어진 filter)**
