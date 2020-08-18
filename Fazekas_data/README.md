@@ -12,15 +12,11 @@ train / validation split
 </code>
 </pre>
 2. Train Validation Split
-<pre>
-<code>
     #train_validation_split
     in_path = out_path
     out_path = out_path + '_split'
     rand_seed = 888
     #trainval_split(in_path, out_path, rand_seed)
     groupsplit(in_path, out_path, rand_seed, 8/9)
-</code>
-</pre>
 trainval_split : 이미지 수 가준 split
 groupsplit : 환자 수 기준 split
