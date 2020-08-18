@@ -37,8 +37,8 @@ groupsplit : 환자 수 기준 split
     undersampling(in_path,out_path,under_class_list,num_sample_list,rand_seed)
 </code>
 </pre>
-under_class_list : undersample할 class명
-num_sample_list : undersample 개수
+under_class_list : undersample할 class명\
+num_sample_list : undersample 개수\
 -> 위의 경우 '0ZERO' class 100개, '1ONE' class 50개로 undersample
 
 ### 4. Zoom
@@ -57,8 +57,8 @@ num_sample_list : undersample 개수
             zoom_use_filter(in_path+'/train/'+cls,out_path+'/train/'+cls, zoom, filter)
 </code>
 </pre>
-class_list_zoom : zoom할 class명
-zoom_list : zoom 비율
+class_list_zoom : zoom할 class명\
+zoom_list : zoom 비율\
 -> 위의 경우 '1ONE' class, '2TWO' class 모두 1.1, 1.2배 zoom
 
 ### 5. Augmentation
@@ -75,7 +75,7 @@ zoom_list : zoom 비율
         #aug.applyAugLRUD(out_path+'/train/'+cls+'/', out_path+'/train/'+cls+'/')
 </code>
 </pre>
-class_list : augmentation할 class명
+class_list : augmentation할 class명\
 aug.py에서 지정한 augmentation 수행(현재 vertical flip)
 
 ### 6. CLAHE
