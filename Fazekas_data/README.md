@@ -108,6 +108,11 @@ aug.py에서 지정한 augmentation 수행(현재 vertical flip)
     trainval_dir = 'trainval path'
 </code>
 </pre>
+in_path : 데이터 원본경로
+out_path : train set + validation set 저장경로
+testset_path : CLAHE 적용한 testset 저장경로
+trainval_dir : 각 seed별로 나눈 train/val set 저장경로
+
 ### Train+Validation set / Test Set split
 <pre>
 <code>
@@ -121,7 +126,7 @@ aug.py에서 지정한 augmentation 수행(현재 vertical flip)
          clahe.clahe_allfiles_dir(in_path+'/'+dir, testset_path+'/'+dir, 8)
 </code>
 </pre>
-    dataset을 train+validation / test 로 split -> testset에 CLAHE 적용하여 testset_path에 저장
+dataset을 train+validation / test 로 split -> testset에 CLAHE 적용하여 testset_path에 저장
 
 ### Train set / Validation Set split
 <pre>
@@ -133,4 +138,4 @@ aug.py에서 지정한 augmentation 수행(현재 vertical flip)
     '''
 </code>
 </pre>
-    각 seed별로 train set / validation set을 나누어 trainval_dir에 저장
+각 seed별로 train set / validation set을 나누어 trainval_dir에 저장
