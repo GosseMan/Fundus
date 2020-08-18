@@ -1,9 +1,9 @@
-## preprocess.py
+# preprocess.py
 ***
-train / validation split
+## train / validation split
 ***
 다음 중 필요한 부분을 선택하여 사용
-1. Resize
+### 1. Resize
 <pre>
 <code>
     #resize_allfiles(in_path, out_path)
@@ -12,7 +12,7 @@ train / validation split
 </code>
 </pre>
 
-2. Train Validation Split
+### 2. Train Validation Split
 <pre>
 <code>
     #train_validation_split
@@ -26,7 +26,7 @@ train / validation split
 trainval_split : 이미지 수 가준 split
 groupsplit : 환자 수 기준 split
 
-3. Undersampling
+### 3. Undersampling
 <pre>
 <code>
     #undersampling
@@ -41,7 +41,7 @@ under_class_list : undersample할 class명
 num_sample_list : undersample 개수
 -> 위의 경우 '0ZERO' class 100개, '1ONE' class 50개로 undersample
 
-4. Zoom
+### 4. Zoom
 <pre>
 <code>
     #zoom
@@ -61,7 +61,7 @@ class_list_zoom : zoom할 class명
 zoom_list : zoom 비율
 -> 위의 경우 '1ONE' class, '2TWO' class 모두 1.1, 1.2배 zoom
 
-5. Augmentation
+### 5. Augmentation
 <pre>
 <code>
     #augmentation
@@ -78,7 +78,7 @@ zoom_list : zoom 비율
 class_list : augmentation할 class명
 aug.py에서 지정한 augmentation 수행(현재 vertical flip)
 
-6. CLAHE
+### 6. CLAHE
 <pre>
 <code>
     #CLAHE
