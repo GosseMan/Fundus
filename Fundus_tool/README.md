@@ -1,4 +1,4 @@
-##optic_extract.py
+## optic_extract.py
 ***
 참고 : <https://doi.org/10.1016/j.cmpb.2015.10.010>
 ***
@@ -16,7 +16,7 @@ contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비�
 ##### 6.Optic disk result
 
 ***
-##edge_block.py
+## edge_block.py
 ***
 1. Read green image
 2. Canny edge detect
@@ -25,7 +25,7 @@ contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비�
 디렉토리의 이미지를 읽고 edge block기준 오름차순 정렬하여 sort_path에 저장
 
 ***
-##makefilter.py
+## makefilter.py
 ***
 <img src="./filter_example/average.jpg" width="30%" height="10%"> <img src="./filter_example/filter.jpg" width="30%" height="10%">
 
@@ -36,7 +36,7 @@ filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평�
 **filter_average_binary : 디렉토리 내 모든 이미지의 평균값을 binarization하여 필터생성 (threshold 40->100 반복)**
 
 ***
-##zoomin.py
+## zoomin.py
 ***
 <img src="./zoom_example/origin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin_filter.jpg" width="30%" height="10%">
 
