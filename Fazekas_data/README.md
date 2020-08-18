@@ -96,7 +96,7 @@ aug.py에서 지정한 augmentation 수행(현재 vertical flip)
 
 ***
 
-# preprocess.py
+# preprocess_trainvaltest.py
 ***
 ## train / validation / test split
 ***
