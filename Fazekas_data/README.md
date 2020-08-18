@@ -100,3 +100,37 @@ aug.py에서 지정한 augmentation 수행(현재 vertical flip)
 ***
 ## train / validation / test split
 ***
+<pre>
+<code>
+    in_path = 'input image path'
+    out_path = 'trainval / test split path'
+    testset_path = 'testset path'
+    trainval_dir = 'trainval path'
+</code>
+</pre>
+### Train+Validation set / Test Set split
+<pre>
+<code>
+    rand_seed = 8
+    #trainval_split(in_path, out_path, rand_seed)
+    groupsplit(in_path, out_path, rand_seed, 0.9)
+    in_path = out_path + '/val'
+    testset_path = '/home/psj/Desktop/testset'
+    dir_list = os.listdir(in_path)
+    for dir in dir_list:
+         clahe.clahe_allfiles_dir(in_path+'/'+dir, testset_path+'/'+dir, 8)
+</code>
+</pre>
+    dataset을 train+validation / test 로 split -> testset에 CLAHE 적용하여 testset_path에 저장
+
+### Train set / Validation Set split
+<pre>
+<code>
+    seed_list = [8, 88, 888]
+    for seed in seed_list:
+    '''
+    이후로 preprocess.py와 동일
+    '''
+</code>
+</pre>
+    각 seed별로 train set / validation set을 나누어 trainval_dir에 저장
