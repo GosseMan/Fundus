@@ -59,6 +59,7 @@ num_sample_list : undersample 개수\
 </pre>
 class_list_zoom : zoom할 class명\
 zoom_list : zoom 비율\
+filter : 기존에 저장된 사진 filter\
 -> 위의 경우 '1ONE' class, '2TWO' class 모두 1.1, 1.2배 zoom
 
 ### 5. Augmentation
