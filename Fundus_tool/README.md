@@ -35,3 +35,10 @@ filter_average_binary : 디렉토리 내 모든 이미지의 평균값을 binari
 
 zoomin.py
 =============
+<img src="./zoom_example/origin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoom.jpg" width="30%" height="10%"> <img src="./zoom_example/zoom_filter.jpg" width="30%" height="10%">
+
+zoomin / zoomin_dir : 이미지 zoom-in
+
+zoomin_cut / zoomin_cut_dir : 이미지 zoom-in 후 자신을 binarization한 filter 적용
+
+filter_average_binary : 디렉토리 내 모든 이미지를 zoom-in 후 사전에 만들어진 filter를 이용하여 crop
