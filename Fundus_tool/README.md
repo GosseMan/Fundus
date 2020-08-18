@@ -31,7 +31,7 @@ filter_dir : 디렉토리 내 모든 이미지의 필터생성
 
 filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평균한 필터생성
 
-filter_average_binary : 디렉토리 내 모든 이미지의 평균값을 binarization하여 필터생성 (threshold 40->100 반복)
+**filter_average_binary : 디렉토리 내 모든 이미지의 평균값을 binarization하여 필터생성 (threshold 40->100 반복)**
 
 zoomin.py
 =============
@@ -41,4 +41,4 @@ zoomin / zoomin_dir : 이미지 zoom-in
 
 zoomin_cut / zoomin_cut_dir : 이미지 zoom-in 후 자신을 binarization한 filter 적용
 
-filter_average_binary : 디렉토리 내 모든 이미지를 zoom-in 후 사전에 만들어진 filter를 이용하여 crop
+**zoom_use_filter: 디렉토리 내 모든 이미지를 zoom-in 후 사전에 만들어진 filter를 이용하여 crop**
