@@ -35,7 +35,7 @@ filter_average_binary : 디렉토리 내 모든 이미지의 평균값을 binari
 
 zoomin.py
 =============
-<img src="./zoom_example/origin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoom.jpg" width="30%" height="10%"> <img src="./zoom_example/zoom_filter.jpg" width="30%" height="10%">
+<img src="./zoom_example/origin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin_filter.jpg" width="30%" height="10%">
 
 zoomin / zoomin_dir : 이미지 zoom-in
 
