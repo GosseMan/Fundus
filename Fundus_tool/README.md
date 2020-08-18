@@ -14,3 +14,7 @@ crop된 부분 binarization(특정 Threshold 지정가능) -> contour
 ##### 5.Find fit-ellipse
 contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비율(circularity)에 따라 optic disk로 채택
 ##### 6.Optic disk result
+
+edge_block.py
+=============
+path에 있는 image를 읽고 edge block순으로 sort_path에 오름차순 정렬.
