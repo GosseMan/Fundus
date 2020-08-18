@@ -28,5 +28,10 @@ makefilter.py
 <img src="./filter_example/average.jpg" width="30%" height="10%"> <img src="./filter_example/filter.jpg" width="30%" height="10%">
 
 filter_dir : 디렉토리 내 모든 이미지의 필터생성
+
 filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평균한 필터생성
+
 filter_average_binary : 디렉토리 내 모든 이미지의 평균값을 binarization하여 필터생성 (threshold 40->100 반복)
+
+zoomin.py
+=============
