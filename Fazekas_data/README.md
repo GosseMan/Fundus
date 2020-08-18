@@ -2,7 +2,7 @@
 ***
 ## train / validation split
 ***
-다음 중 필요한 부분을 선택하여 사용
+다음 중 필요한 부분을 선택하여 사용 (
 ### 1. Resize
 <pre>
 <code>
