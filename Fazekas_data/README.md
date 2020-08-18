@@ -18,9 +18,9 @@
     #train_validation_split
     in_path = out_path
     out_path = out_path + '_split'
-    rand_seed = 888
+    rand_seed = 8
     #trainval_split(in_path, out_path, rand_seed)
-    groupsplit(in_path, out_path, rand_seed, 8/9)
+    groupsplit(in_path, out_path, rand_seed, 0.9)
 </code>
 </pre>
 trainval_split : 이미지 수 가준 split\
