@@ -108,9 +108,9 @@ aug.py에서 지정한 augmentation 수행(현재 vertical flip)
     trainval_dir = 'trainval path'
 </code>
 </pre>
-in_path : 데이터 원본경로
-out_path : train set + validation set 저장경로
-testset_path : CLAHE 적용한 testset 저장경로
+in_path : 데이터 원본경로\
+out_path : train set + validation set 저장경로\
+testset_path : CLAHE 적용한 testset 저장경로\
 trainval_dir : 각 seed별로 나눈 train/val set 저장경로
 
 ### Train+Validation set / Test Set split
