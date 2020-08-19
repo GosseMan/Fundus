@@ -23,7 +23,7 @@
     groupsplit(in_path, out_path, rand_seed, 0.9)
 </code>
 </pre>
-trainval_split : 이미지 수 가준 split\
+trainval_split : 이미지 수 준 split\
 groupsplit : 환자 수 기준 split
 
 ### 3. Undersampling
