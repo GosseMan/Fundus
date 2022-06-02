@@ -2,8 +2,7 @@
 
 참고 : <https://doi.org/10.1016/j.cmpb.2015.10.010>
 
-<img src="./OD_example/1.jpg" width="30%" height="10%"> <img src="./OD_example/2.jpg" width="30%" height="10%"> <img src="./OD_example/3.jpg" width="30%" height="10%">
-<img src="./OD_example/4.jpg" width="30%" height="10%"> <img src="./OD_example/5.jpg" width="30%" height="10%"> <img src="./OD_example/6.jpg" width="30%" height="10%">
+- 오픈소스 이미지로 업데이트 필요
 ##### 1.Original Image
 ##### 2.Find optic disk position
 Kaiser Window 적용시킨 후 사진 내에서 가장 밝은 지점
@@ -27,7 +26,7 @@ contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비�
 ***
 # makefilter.py
 
-<img src="./filter_example/average.jpg" width="30%" height="10%"> <img src="./filter_example/filter.jpg" width="30%" height="10%">
+- 오픈소스 이미지로 업데이트 필요
 
 filter_dir : 디렉토리 내 모든 이미지의 필터생성
 
