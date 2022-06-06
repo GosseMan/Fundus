@@ -118,7 +118,7 @@ def extract_od(img_path, out_path):
 
 def main():
     #Input Image Path example
-    file = './od_example/6.jpg'
+    file = './od_example/od6.jpg'
     #Output Image Path example
     output_path = "./out/"
     extract_od(file,output_path)
