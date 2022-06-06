@@ -2,7 +2,8 @@
 
 참고 : <https://doi.org/10.1016/j.cmpb.2015.10.010>
 
-- 오픈소스 이미지로 업데이트 필요
+<img src="./OD_example/1.jpg" width="30%" height="10%"> <img src="./OD_example/2.jpg" width="30%" height="10%"> <img src="./OD_example/3.jpg" width="30%" height="10%">
+ <img src="./OD_example/4.jpg" width="30%" height="10%"> <img src="./OD_example/5.jpg" width="30%" height="10%"> <img src="./OD_example/6.jpg" width="30%" height="10%">
 ##### 1.Original Image
 ##### 2.Find optic disk position
 Kaiser Window 적용시킨 후 사진 내에서 가장 밝은 지점
@@ -44,3 +45,5 @@ zoomin / zoomin_dir : 이미지 zoom-in
 zoomin_cut / zoomin_cut_dir : 이미지 zoom-in 후 자신을 binarization한 filter 적용
 
 **zoom_use_filter: 디렉토리 내 모든 이미지를 zoom-in 후 사전에 만들어진 filter를 이용하여 crop (makefilter.py에서 만들어진 filter)**
+
+이미지 출처 : https://www.nature.com/articles/s41467-021-25138-w
