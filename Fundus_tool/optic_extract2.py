@@ -1,11 +1,7 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import cv2
 import os
 import math
-from mpl_toolkits.mplot3d.axes3d import Axes3D
-
-
 def kaiser_filtering(k_filter, green_im):
     f = cv2.dft(green_im.astype(np.float32), flags=cv2.DFT_COMPLEX_OUTPUT)
     f_shifted = np.fft.fftshift(f)
@@ -122,7 +118,7 @@ def extract_od(img_path, out_path):
 
 def main():
     #Input Image Path example
-    file = './img.jpg'
+    file = './od_example/6.jpg'
     #Output Image Path example
     output_path = "./out/"
     extract_od(file,output_path)
