@@ -2,8 +2,8 @@
 
 참고 : <https://doi.org/10.1016/j.cmpb.2015.10.010>
 
-<img src="./OD_example/1.jpg" width="30%" height="10%"> <img src="./OD_example/2.jpg" width="30%" height="10%"> <img src="./OD_example/3.jpg" width="30%" height="10%">
- <img src="./OD_example/4.jpg" width="30%" height="10%"> <img src="./OD_example/5.jpg" width="30%" height="10%"> <img src="./OD_example/6.jpg" width="30%" height="10%">
+<img src="./OD_example/od1.jpg" width="30%" height="10%"> <img src="./OD_example/od2.jpg" width="30%" height="10%"> <img src="./OD_example/od3.jpg" width="30%" height="10%">
+ <img src="./OD_example/od4.jpg" width="30%" height="10%"> <img src="./OD_example/od5.jpg" width="30%" height="10%"> <img src="./OD_example/od6.jpg" width="30%" height="10%">
 ##### 1.Original Image
 ##### 2.Find optic disk position
 Kaiser Window 적용시킨 후 사진 내에서 가장 밝은 지점
@@ -37,8 +37,6 @@ filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평�
 
 ***
 # zoomin.py
-
-<img src="./zoom_example/origin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin.jpg" width="30%" height="10%">
 
 zoomin / zoomin_dir : 이미지 zoom-in
 
