@@ -27,8 +27,6 @@ contour의 fit-ellipse를 찾고 contour의 면적과 fit-ellipse의 면적비�
 ***
 # makefilter.py
 
-- 오픈소스 이미지로 업데이트 필요
-
 filter_dir : 디렉토리 내 모든 이미지의 필터생성
 
 filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평균한 필터생성
@@ -37,6 +35,8 @@ filter_binary_average : 디렉토리 내 모든 이미지 binarization 후 평�
 
 ***
 # zoomin.py
+
+<img src="./zoom_example/origin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin.jpg" width="30%" height="10%"> <img src="./zoom_example/zoomin_filter.jpg" width="30%" height="10%">
 
 zoomin / zoomin_dir : 이미지 zoom-in
 
